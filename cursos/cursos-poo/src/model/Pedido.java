@@ -9,6 +9,10 @@ public class Pedido  {
 
     //constructor
 
+
+    public Pedido() {
+    }
+
     public Pedido(Cliente cliente, Produto produto) {
         this.cliente = cliente;
         this.produto = produto;

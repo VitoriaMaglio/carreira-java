@@ -8,6 +8,10 @@ public class Cliente {
 
     //constructor
 
+
+    public Cliente() {
+    }
+
     public Cliente(String nome, String endereco) {
         this.nome = nome;
         this.endereco = endereco;

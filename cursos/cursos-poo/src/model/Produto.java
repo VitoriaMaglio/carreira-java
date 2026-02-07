@@ -1,6 +1,6 @@
 package model;
 
-public class Produto {
+public class Produto implements ProdutoInterface{
 
     //atributtes
 
@@ -9,6 +9,10 @@ public class Produto {
     private int quantidade;
 
     //constructor
+
+
+    public Produto() {
+    }
 
     public Produto(String nome, double preco, int quantidade) {
         this.nome = nome;
@@ -52,5 +56,16 @@ public class Produto {
                 ", preco=" + preco +
                 ", quantidade=" + quantidade +
                 '}';
+    }
+
+
+    @Override
+    public void adicionar() {
+        System.out.println("Produto adicionado no pedido");
+    }
+
+    @Override
+    public void remover() {
+        System.out.println("Produto removido do pedido");
     }
 }
