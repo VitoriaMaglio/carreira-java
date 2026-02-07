@@ -1,7 +1,7 @@
 package tests;
 
-import model.Aluno;
-import model.AlunoBolsista;
+import model.exercicio.Aluno;
+import model.exercicio.AlunoBolsista;
 
 public class Main {
     public static void main(String[] args) {

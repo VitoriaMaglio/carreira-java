@@ -1,8 +1,8 @@
 package tests;
 
-import model.Pagamento;
-import model.PagamentoCartao;
-import model.PagamentoPix;
+import model.exercicio.Pagamento;
+import model.exercicio.PagamentoCartao;
+import model.exercicio.PagamentoPix;
 
 import java.util.ArrayList;
 import java.util.List;
