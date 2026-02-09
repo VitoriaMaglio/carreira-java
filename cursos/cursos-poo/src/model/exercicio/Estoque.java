@@ -16,6 +16,8 @@ public class Estoque extends Produto{
     Produto camisa = new Produto("Camisa", 2);
     Produto calca = new Produto("Calça", 5);
     Produto meia = new Produto("Meia", 7);
+    //MAP -> pares de chave-valor, mas tem qser a key específica pois terão valores repetidos no estoque
+    //Criar um método genérico para atualizar o estoque ->
 
     public void venda(){
         Scanner scanner = new Scanner(System.in);
