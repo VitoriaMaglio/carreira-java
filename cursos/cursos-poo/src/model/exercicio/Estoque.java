@@ -6,6 +6,9 @@ import java.util.Scanner;
 //ter produtos no estoque com nome e quant
 //realizar a venda para o cliente
 //atualiza no estoque
+
+
+//MELHORAR LÓGICA E SOLUÇÃO PARA ALGO MAIS GENÉRICO
 public class Estoque extends Produto{
 
 

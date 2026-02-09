@@ -2,6 +2,7 @@ package model.exercicio;
 
 import java.util.Scanner;
 
+//MELHORAR LÓGICA E SOLUÇÃO PARA ALGO MAIS GENÉRICO
 public class Produto {
 
 
