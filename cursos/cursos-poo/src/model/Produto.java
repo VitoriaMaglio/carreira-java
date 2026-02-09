@@ -1,12 +1,13 @@
 package model;
 
-public class Produto implements ProdutoInterface{
+public class Produto {
 
     //atributtes
 
     private String nome;
     private double preco;
     private int quantidade;
+
 
     //constructor
 
@@ -59,13 +60,5 @@ public class Produto implements ProdutoInterface{
     }
 
 
-    @Override
-    public void adicionar() {
-        System.out.println("Produto adicionado no pedido");
-    }
 
-    @Override
-    public void remover() {
-        System.out.println("Produto removido do pedido");
-    }
 }

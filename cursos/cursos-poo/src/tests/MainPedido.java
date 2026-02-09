@@ -3,6 +3,7 @@ package tests;
 import model.Cliente;
 import model.Pedido;
 import model.Produto;
+import model.StatusPedido;
 
 import java.util.Scanner;
 
@@ -32,6 +33,25 @@ public class MainPedido {
         produto.setQuantidade(quantProd);
 
         pedido.valorTotal(produto);
+        System.out.println("Seu pedido do produto: "+ produto + "está associado ao cliente " + nome);
+
+        System.out.println("Quer adicionar esse produto no seu pedido? ");
+        String resp = scanner.nextLine();
+
+        if (resp != "sim"){
+            pedido.remover(produto);
+
+        }else
+            pedido.adicionar(produto);
+
+        pedido.setStatusPedido(StatusPedido.feito);
+        System.out.println("Pedido " + pedido.getStatusPedido());
+
+        System.out.println(pedido);
+
+
+
+
 
 
 

@@ -1,22 +1,25 @@
 package model;
 
-public class Pedido  {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pedido implements ProdutoInterface {
 
     //atributtes
 
     private Cliente cliente ;
-    private Produto produto;
+    private List<Produto> produtos;
+    private StatusPedido statusPedido;
+
 
     //constructor
 
 
     public Pedido() {
+        this.produtos = new ArrayList<>();
     }
 
-    public Pedido(Cliente cliente, Produto produto) {
-        this.cliente = cliente;
-        this.produto = produto;
-    }
+
 
     //get e set
 
@@ -28,14 +31,21 @@ public class Pedido  {
         this.cliente = cliente;
     }
 
-    public Produto getProduto() {
-        return produto;
+    public List<Produto> getProduto() {
+        return produtos;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setProduto(List<Produto> produto) {
+        this.produtos = produto;
     }
 
+    public StatusPedido getStatusPedido() {
+        return statusPedido;
+    }
+
+    public void setStatusPedido(StatusPedido statusPedido) {
+        this.statusPedido = statusPedido;
+    }
 
     //toString
 
@@ -43,12 +53,26 @@ public class Pedido  {
     public String toString() {
         return "Pedido{" +
                 "cliente=" + cliente +
-                ", produto=" + produto +
+                ", produtos=" + produtos +
+                ", statusPedido=" + statusPedido +
                 '}';
     }
 
     public void valorTotal(Produto produto){
         double total = produto.getQuantidade() * produto.getPreco();
         System.out.println("Valor total da sua compra: " + total);
+    }
+
+    @Override
+    public void adicionar(Produto produto) {
+        System.out.println("Produto adicionado no pedido");
+        produtos.add(produto);
+
+    }
+
+    @Override
+    public void remover(Produto produto) {
+        System.out.println("Produto removido do pedido");
+        produtos.remove(produto);
     }
 }

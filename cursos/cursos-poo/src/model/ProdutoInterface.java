@@ -2,6 +2,6 @@ package model;
 
 public interface ProdutoInterface {
 
-    void adicionar();
-    void remover();
+    void adicionar(Produto produto);
+    void remover(Produto produto);
 }
